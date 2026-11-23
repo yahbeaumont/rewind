@@ -1,0 +1,21 @@
+name: replay
+on: [push, pull_request]
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: verify chains
+        run: |
+          for tape in tapes/*.tape; do npx tsx src/cli.ts verify "$tape"; done
+      - name: replay every tape offline
+        env:
+          OPENAI_API_KEY: ''
+        run: |
+          for tape in tapes/*.tape; do npx tsx src/cli.ts replay "$tape"; done
