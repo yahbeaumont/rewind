@@ -2,7 +2,7 @@
 
 ## Reporting
 
-Email `security@example.com` with a description, a tape if one is involved, and
+Email `security@haybeaumont.com` with a description, a tape if one is involved, and
 the `rewind` version. Expect an acknowledgement within three working days.
 
 ## Scope
