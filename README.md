@@ -2,6 +2,8 @@
 
 Deterministic record and replay for autonomous agent runs
 
+![rewind: record once, replay offline](docs/img/hero.svg)
+
 ## The problem
 
 Agents are distributed systems with a stochastic participant. You cannot debug
@@ -25,6 +27,8 @@ network calls, and fails if the run diverges from the recording.
 The second command produces identical output to the first, on a machine with no
 credentials and no connectivity.
 
+![Record writes every input at the runtime boundary; replay feeds the same inputs back](docs/img/architecture.svg)
+
 ## Quick start
 
     npm ci
@@ -42,11 +46,15 @@ OpenAI-compatible endpoint:
 JSONL, one event per line, SHA-256 hash-chained. Full specification in
 [`docs/tape-format.md`](docs/tape-format.md).
 
+![Each line stores the previous hash, so an edit breaks the chain at the exact line](docs/img/tape-chain.svg)
+
 ## Divergence policy
 
 A missing or differing input is a hard failure, exit code 1, naming the
 sequence. There is no fallthrough to the live world and no override flag. See
 [`docs/divergences.md`](docs/divergences.md).
+
+![A missing event and a differing payload are both hard failures](docs/img/divergence.svg)
 
 ## What it does not do
 

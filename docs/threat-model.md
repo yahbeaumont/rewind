@@ -12,6 +12,8 @@ for 0.1.0.
 
 ## Boundary holes
 
+![What crosses the boundary is recorded; what bypasses it is not](img/boundary.svg)
+
 Interception happens at the runtime boundary, which means anything that does
 not cross the boundary is invisible:
 

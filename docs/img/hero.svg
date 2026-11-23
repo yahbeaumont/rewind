@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="960" height="200" role="img" aria-label="rewind: deterministic record and replay for autonomous agent runs">
+  <style>
+    .bg { fill:#0f1114; }
+    .panel { fill:#16191d; stroke:#2a2f36; }
+    .panel2 { fill:#1c2025; stroke:#2a2f36; }
+    .text { fill:#e6e8ea; }
+    .muted { fill:#98a2ad; }
+    .accent { fill:#46b8a9; }
+    .bad { fill:#e07a6b; }
+    .good { fill:#7fc8a9; }
+    .line { stroke:#2a2f36; }
+    .arrow { stroke:#98a2ad; }
+    .accentline { stroke:#46b8a9; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill:#ffffff; }
+      .panel { fill:#f7f8f9; stroke:#dfe3e7; }
+      .panel2 { fill:#eef0f2; stroke:#dfe3e7; }
+      .text { fill:#14171a; }
+      .muted { fill:#5b6570; }
+      .accent { fill:#0f7f74; }
+      .bad { fill:#b3261e; }
+      .good { fill:#1f7a4d; }
+      .line { stroke:#dfe3e7; }
+      .arrow { stroke:#5b6570; }
+      .accentline { stroke:#0f7f74; }
+    }
+  </style>
+  <rect class="bg" width="960" height="200" rx="12"/>
+  <defs>
+    <marker id="head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect class="accent" x="24" y="24" width="4" height="44" rx="2"/>
+  <text class="text" x="44" y="52" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="30" font-weight="700" text-anchor="start">rewind</text>
+  <text class="muted" x="44" y="76" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="400" text-anchor="start">deterministic record and replay for autonomous agent runs</text>
+  <rect class="panel" x="24" y="108" width="240" height="62" rx="10" stroke-width="1"/>
+  <text class="text" x="44" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">record</text>
+  <text class="muted" x="44" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">one live run</text>
+  <line class="arrow" x1="270" y1="139" x2="330" y2="139" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="274" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">tape</text>
+  <rect class="panel" x="336" y="108" width="288" height="62" rx="10" stroke-width="1"/>
+  <text class="text" x="356" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">jsonl, hash-chained</text>
+  <text class="muted" x="356" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">verified before every replay</text>
+  <line class="arrow" x1="630" y1="139" x2="690" y2="139" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="634" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">replay</text>
+  <rect class="panel" x="696" y="108" width="240" height="62" rx="10" stroke-width="1"/>
+  <text class="text" x="716" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">offline</text>
+  <text class="muted" x="716" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">same output, or exit 1</text>
+</svg>

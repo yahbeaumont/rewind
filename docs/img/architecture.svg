@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-label="Record captures every input at the runtime boundary, replay feeds the same inputs back">
+  <style>
+    .bg { fill:#0f1114; }
+    .panel { fill:#16191d; stroke:#2a2f36; }
+    .panel2 { fill:#1c2025; stroke:#2a2f36; }
+    .text { fill:#e6e8ea; }
+    .muted { fill:#98a2ad; }
+    .accent { fill:#46b8a9; }
+    .bad { fill:#e07a6b; }
+    .good { fill:#7fc8a9; }
+    .line { stroke:#2a2f36; }
+    .arrow { stroke:#98a2ad; }
+    .accentline { stroke:#46b8a9; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill:#ffffff; }
+      .panel { fill:#f7f8f9; stroke:#dfe3e7; }
+      .panel2 { fill:#eef0f2; stroke:#dfe3e7; }
+      .text { fill:#14171a; }
+      .muted { fill:#5b6570; }
+      .accent { fill:#0f7f74; }
+      .bad { fill:#b3261e; }
+      .good { fill:#1f7a4d; }
+      .line { stroke:#dfe3e7; }
+      .arrow { stroke:#5b6570; }
+      .accentline { stroke:#0f7f74; }
+    }
+  </style>
+  <rect class="bg" width="960" height="400" rx="12"/>
+  <defs>
+    <marker id="head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <text class="accent" x="24" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" text-anchor="start" letter-spacing="2">record</text>
+  <text class="muted" x="24" y="54" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="400" text-anchor="start">one live run, every input written to a tape</text>
+  <rect class="panel" x="24" y="74" width="220" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="44" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" text-anchor="start">agent</text>
+  <text class="muted" x="44" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">your code, unchanged</text>
+  <rect class="panel" x="320" y="74" width="320" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="340" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" text-anchor="start">boundary interceptors</text>
+  <text class="muted" x="340" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">fetch · Date · performance.now</text>
+  <text class="muted" x="340" y="142" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">Math.random · fs · model · tool</text>
+  <rect class="panel" x="716" y="74" width="220" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="736" y="108" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" text-anchor="start">tape</text>
+  <text class="muted" x="736" y="132" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">jsonl, hash-chained</text>
+  <line class="arrow" x1="248" y1="116" x2="314" y2="116" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="252" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">reads</text>
+  <line class="arrow" x1="644" y1="116" x2="710" y2="116" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="648" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">append</text>
+  <line class="line" x1="24" y1="196" x2="936" y2="196" stroke-width="1" stroke-dasharray="4 6"/>
+  <text class="accent" x="24" y="222" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" text-anchor="start" letter-spacing="2">replay</text>
+  <text class="muted" x="24" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="400" text-anchor="start">no network, no credentials, no model</text>
+  <rect class="panel" x="24" y="262" width="220" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="44" y="296" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" text-anchor="start">tape</text>
+  <text class="muted" x="44" y="320" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">verified before replay</text>
+  <rect class="panel" x="320" y="262" width="320" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="340" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700" text-anchor="start">same interceptors</text>
+  <text class="muted" x="340" y="312" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">next(kind, request) in order</text>
+  <text class="muted" x="340" y="330" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="400" text-anchor="start">payload compared as canonical json</text>
+  <rect class="panel" x="716" y="262" width="220" height="84" rx="10" stroke-width="1"/>
+  <text class="text" x="736" y="296" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" text-anchor="start">agent</text>
+  <text class="muted" x="736" y="320" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">identical output</text>
+  <line class="arrow" x1="248" y1="304" x2="314" y2="304" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="252" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">next</text>
+  <line class="arrow" x1="644" y1="304" x2="710" y2="304" stroke-width="1.4" marker-end="url(#head)"/>
+  <text class="muted" x="648" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" text-anchor="start">same run</text>
+  <text class="muted" x="24" y="378" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">a divergence stops the run with exit code 1</text>
+</svg>

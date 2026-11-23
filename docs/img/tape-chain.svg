@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 352" width="960" height="352" role="img" aria-label="Each tape line stores the previous hash, so any edit breaks the chain">
+  <style>
+    .bg { fill:#0f1114; }
+    .panel { fill:#16191d; stroke:#2a2f36; }
+    .panel2 { fill:#1c2025; stroke:#2a2f36; }
+    .text { fill:#e6e8ea; }
+    .muted { fill:#98a2ad; }
+    .accent { fill:#46b8a9; }
+    .bad { fill:#e07a6b; }
+    .good { fill:#7fc8a9; }
+    .line { stroke:#2a2f36; }
+    .arrow { stroke:#98a2ad; }
+    .accentline { stroke:#46b8a9; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill:#ffffff; }
+      .panel { fill:#f7f8f9; stroke:#dfe3e7; }
+      .panel2 { fill:#eef0f2; stroke:#dfe3e7; }
+      .text { fill:#14171a; }
+      .muted { fill:#5b6570; }
+      .accent { fill:#0f7f74; }
+      .bad { fill:#b3261e; }
+      .good { fill:#1f7a4d; }
+      .line { stroke:#dfe3e7; }
+      .arrow { stroke:#5b6570; }
+      .accentline { stroke:#0f7f74; }
+    }
+  </style>
+  <rect class="bg" width="960" height="352" rx="12"/>
+  <defs>
+    <marker id="head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect class="panel" x="24" y="56" width="188" height="96" rx="10" stroke-width="1"/>
+  <text class="muted" x="42" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">seq 0</text>
+  <text class="text" x="42" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">run.start</text>
+  <text class="accent" x="42" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">9c1e...</text>
+  <line class="arrow" x1="216" y1="104" x2="264" y2="104" stroke-width="1.4" marker-end="url(#head)"/>
+  <rect class="panel" x="268" y="56" width="188" height="96" rx="10" stroke-width="1"/>
+  <text class="muted" x="286" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">seq 1</text>
+  <text class="text" x="286" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">clock.now</text>
+  <text class="accent" x="286" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">3f7a...</text>
+  <line class="arrow" x1="460" y1="104" x2="508" y2="104" stroke-width="1.4" marker-end="url(#head)"/>
+  <rect class="panel" x="512" y="56" width="188" height="96" rx="10" stroke-width="1"/>
+  <text class="muted" x="530" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">seq 2</text>
+  <text class="text" x="530" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">model.request</text>
+  <text class="accent" x="530" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">b204...</text>
+  <line class="arrow" x1="704" y1="104" x2="752" y2="104" stroke-width="1.4" marker-end="url(#head)"/>
+  <rect class="panel" x="756" y="56" width="188" height="96" rx="10" stroke-width="1"/>
+  <text class="muted" x="774" y="84" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">seq 3</text>
+  <text class="text" x="774" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" text-anchor="start">model.response</text>
+  <text class="accent" x="774" y="134" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">e51c...</text>
+  <text class="muted" x="24" y="180" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">prev_hash points at the previous line; the first line seeds the chain with 64 zeros</text>
+  <rect class="panel2" x="24" y="198" width="912" height="110" rx="10" stroke-width="1"/>
+  <text class="text" x="44" y="226" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="400" text-anchor="start">hash = sha256( prev_hash + "\n" + seq + "\n" + kind + "\n" + canonical(payload) )</text>
+  <text class="muted" x="44" y="254" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">canonical sorts keys, drops undefined, formats numbers with toPrecision(17)</text>
+  <text class="muted" x="44" y="278" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">ts stays outside the payload and outside the hash, so re-sealing keeps event identity</text>
+  <text class="muted" x="24" y="336" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="400" text-anchor="start">verify recomputes the whole chain; seal rewrites it after an intentional edit</text>
+</svg>
