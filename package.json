@@ -1,0 +1,23 @@
+{
+  "name": "rewind",
+  "version": "0.1.0",
+  "description": "Deterministic record and replay for autonomous agent runs",
+  "type": "module",
+  "bin": { "rewind": "./dist/cli.js" },
+  "exports": { ".": "./dist/index.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "agent": "node --import tsx --import ./src/preload.ts ./src/agent.ts"
+  },
+  "dependencies": { "commander": "^12.1.0", "zod": "^3.23.8" },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "license": "MIT"
+}
